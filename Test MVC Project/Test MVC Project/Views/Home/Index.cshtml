@@ -1,0 +1,88 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/display.js"></script>
+
+
+
+<div class="row">
+    <div class="col-lg-4">
+
+        <h2 class="h2 section-header">Config</h2>
+
+        <br />
+
+        <div class="config-container">
+            <input type="button" value="New Student" id="newStudentBtn" class="btn btn-success btn-lg config-button" />
+        </div>
+    </div>
+
+    <div class="col-lg-8">
+        <h2 class="h2 section-header">Student List</h2>
+
+        <br />
+
+        <table class="table table-striped">
+            <thead>
+                <tr><th width="30px"></th><th>Namn</th><th>Nummer</th><th width="30px"></th><th hidden></th></tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+        </table>
+
+    </div>
+
+    <div>
+        <div class="col-lg-4"></div>
+
+        <div class="col-lg-8">
+
+            <table id="editTable" class="table table-striped" hidden>
+                <thead>
+                    <tr><th width="30px"></th><th>Namn</th><th>Nummer</th><th width="30px"></th><th hidden></th></tr>
+                </thead>
+                <tbody>
+                <td></td>
+                <td>
+                    <input id="editName" type="text" value="" placeholder="Namn" />
+                </td>
+                <td>
+                    <input id="editNumber" type="text" value="" placeholder="Nummer" />
+                </td>
+                <td width="30px"></td>
+                <td class="edit-buttons-group">
+                    <span id="saveEdit" class="glyphicon glyphicon-ok clickable"></span>
+                    <span id="deleteEdit" class="glyphicon glyphicon-trash clickable"></span>
+                </td>
+                </tbody>
+            </table>
+
+            <table id="createTable" class="table table-striped" hidden>
+                <thead>
+                    <tr><th width="30px"></th><th>Namn</th><th>Nummer</th><th width="30px"></th><th hidden></th></tr>
+                </thead>
+                <tbody>
+                <td></td>
+                <td>
+                    <input id="createName" type="text" value="" placeholder="Namn" />
+                </td>
+                <td>
+                    <input id="createNumber" type="text" value="" placeholder="Nummer" />
+                </td>
+                <td width="30px"></td>
+                <td>
+                    <span id="saveCreation" class="glyphicon glyphicon-plus-sign clickable"></span>
+                </td>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-lg-11"></div> 
+
+        <div id="deleteConfirmDiv" class="col-lg-1" hidden>
+            <input type="button" value="Delete?" class="btn btn-sm btn-danger delete-confirm" />
+        </div>
+    </div>
+</div>
